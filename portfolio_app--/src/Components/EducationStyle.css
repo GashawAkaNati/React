@@ -1,0 +1,60 @@
+.school {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 500px;
+    top: 30px;
+    background-color: aqua;
+}
+
+.scname {
+    position: absolute;
+    top: 10px;
+}
+
+#education {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+}
+
+.title {
+    position: relative;
+    top: 20px;
+    left: 0px;
+}
+
+#course {
+    position: relative;
+    top: 20px;
+    left: -5px;
+}
+
+.date {
+    position: relative;
+    top: 25px;
+    left: 0px;
+}
+
+#datetext {
+    position: relative;
+    top: 25px;
+    left: -5px;
+}
+
+.buttonsForEd {
+    display: flex;
+    position: relative;
+    top: 35px;
+    left: 60px;
+}
+
+.editable {
+    width: 300px;
+    background-color: white;
+}
+
+.submitting {
+    width: 300px;
+    background-color: darkgray;
+}

@@ -1,0 +1,41 @@
+import React, { useState } from 'react';
+
+function ImportantFieldWithValidation() {
+  const [inputValue, setInputValue] = useState('');
+  const [isTouched, setIsTouched] = useState(false); // Track if the field was touched
+
+  const handleBlur = () => setIsTouched(true); // Check when the user leaves the field
+
+  const isValid = inputValue.trim() !== ''; // Check if the input is valid
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        onBlur={handleBlur}
+        placeholder="Enter your name"
+        className={isTouched && !isValid ? 'invalid' : ''}
+      />
+      {!isValid && isTouched && (
+        <p className="error-message">This field is required.</p>
+      )}
+
+      <style>
+        {`
+          .invalid {
+            border: 2px solid red;
+          }
+          .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 4px;
+          }
+        `}
+      </style>
+    </div>
+  );
+}
+
+export default ImportantFieldWithValidation;
